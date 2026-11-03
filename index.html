@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#F5EFE4">
+  <!-- A personal app: keep it out of search results -->
+  <meta name="robots" content="noindex, nofollow">
+  <!-- GitHub Pages can't send security headers, so the policy rides in the page: only our own files, only our Supabase project -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src https://yqyctwgwhtezunsxxbcx.supabase.co; manifest-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>מעבדת רעיונות</title>
+  <link rel="icon" href="icon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="רעיונות">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="preconnect" href="https://yqyctwgwhtezunsxxbcx.supabase.co" crossorigin>
+  <!-- ?v= is raised on every update (here and in the imports), so a phone never mixes old and new files.
+       There is no service worker in stage 1, so Safari may keep an old copy for up to 10 minutes after an update. -->
+  <link rel="stylesheet" href="style.css?v=4">
+  <link rel="modulepreload" href="dom.js?v=4">
+  <link rel="modulepreload" href="data.js?v=4">
+  <link rel="modulepreload" href="config.js?v=4">
+  <!-- Our own copy of the Supabase library (same file as the calendar). A classic script, so it runs before app.js -->
+  <script src="vendor/supabase.js?v=4"></script>
+  <script type="module" src="app.js?v=4"></script>
+</head>
+<body>
+  <main id="app" aria-busy="true">
+    <!-- Static skeleton: on screen the moment the page opens, before any script ran. app.js replaces it. -->
+    <div class="screen" aria-hidden="true">
+      <header class="topbar"><span class="skel skel-title"></span></header>
+      <div class="card qa boot-qa"><span class="skel skel-line"></span></div>
+      <div class="idea-card skel-card"><span class="skel skel-line"></span><span class="skel skel-line short"></span></div>
+      <div class="idea-card skel-card"><span class="skel skel-line"></span><span class="skel skel-line short"></span></div>
+    </div>
+  </main>
+  <noscript><p class="form-msg">האפליקציה צריכה JavaScript כדי לעבוד.</p></noscript>
+</body>
+</html>

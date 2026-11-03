@@ -1,0 +1,17 @@
+# Secrets and local config must never be committed
+.env
+.env.*
+*.pem
+*.key
+secrets*
+
+# Logs and tool output
+*.log
+node_modules/
+
+# Operating system and sync leftovers
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+~$*
