@@ -1,9 +1,9 @@
 // מעבדת רעיונות - the screens. Hebrew, right-to-left, phone first.
 // Rule for every status: a word AND an icon (Tal is partly colour blind), never colour alone.
 // Rule for every piece of text that came from the database: textContent only (see dom.js).
-import { h, icon, prose, linkify, fmtDate, daysAgoText, toast, debounce } from './dom.js?v=4';
-import * as api from './data.js?v=4';
-import { AGENT_STALE_HOURS } from './config.js?v=4';
+import { h, icon, prose, linkify, fmtDate, daysAgoText, toast, debounce } from './dom.js?v=5';
+import * as api from './data.js?v=5';
+import { AGENT_STALE_HOURS } from './config.js?v=5';
 
 const root = document.getElementById('app');
 

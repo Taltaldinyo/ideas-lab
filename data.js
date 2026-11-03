@@ -1,7 +1,7 @@
 // Everything that reads or writes ideas. The screens never talk to Supabase directly.
 // The Supabase library is a copy kept in vendor/, loaded by index.html (same file the calendar app uses).
 const { createClient } = window.supabase;
-import { SUPABASE_URL, SUPABASE_KEY, LOGIN_EMAIL, AUTH_STORAGE_KEY } from './config.js?v=4';
+import { SUPABASE_URL, SUPABASE_KEY, LOGIN_EMAIL, AUTH_STORAGE_KEY } from './config.js?v=5';
 
 // Demo mode: sample ideas kept in memory, no sign-in. Only on this computer (localhost), so the screens can be
 // checked without the real password and without touching real data. ?demo, ?demo=fresh, ?demo=empty, ?demo=big
