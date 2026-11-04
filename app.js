@@ -1,9 +1,9 @@
 // מעבדת רעיונות - the screens. Hebrew, right-to-left, phone first.
 // Rule for every status: a word AND an icon (Tal is partly colour blind), never colour alone.
 // Rule for every piece of text that came from the database: textContent only (see dom.js).
-import { h, icon, prose, linkify, fmtDate, daysAgoText, toast, debounce } from './dom.js?v=5';
-import * as api from './data.js?v=5';
-import { AGENT_STALE_HOURS } from './config.js?v=5';
+import { h, icon, prose, linkify, fmtDate, daysAgoText, toast, debounce } from './dom.js?v=6';
+import * as api from './data.js?v=6';
+import { AGENT_STALE_HOURS } from './config.js?v=6';
 
 const root = document.getElementById('app');
 
@@ -243,7 +243,7 @@ function paintList({ animate = false } = {}) {
       window.scrollTo({ top: 0, behavior: reducedMotion() ? 'auto' : 'smooth' });
       document.getElementById('qa-title')?.focus({ preventScroll: true });
     } }, icon('plus'), h('span', { text: 'הוסף רעיון' })) : null;
-    box.replaceChildren(h('div', { class: 'empty card-soft' + (animate ? ' enter' : '') }, icon(STATUS[S.tab].ic, 'empty-ic'), h('p', { class: 'empty-title', text: t }), h('p', { class: 'muted', text: sub }), goAdd));
+    box.replaceChildren(h('div', { class: 'empty empty-tab card-soft' + (animate ? ' enter' : '') }, icon(STATUS[S.tab].ic, 'empty-ic'), h('p', { class: 'empty-title', text: t }), h('p', { class: 'muted', text: sub }), goAdd));
     return;
   }
   const ul = h('ul', { class: 'idea-list' + (animate ? ' enter' : ''), role: 'list' }, ...items.map((i) => h('li', {}, ideaCard(i))));
